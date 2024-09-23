@@ -135,7 +135,7 @@ function checkNumber(num) {
 }
 
 // Handle showing Modal
-function handleModal(his) {
+function handleModal(histo) {
   confModal.classList.remove('hidden');
   confModal.classList.add('flex');
 
@@ -149,7 +149,7 @@ function handleModal(his) {
     'mb-8'
   );
   sec.innerHTML = `
-  <h5 class="text-xl font-bold py-4">${his}</h5>
+  <h5 class="text-xl font-bold py-4">${histo}</h5>
   <p class="text-gray-800">Date : ${new Date()}</p>
   `;
 
