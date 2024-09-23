@@ -121,7 +121,7 @@ function handleBalance(area) {
 }
 // Check is a Number & Return or Alert
 function checkNumber(num) {
-  if (!isNaN(num) && num > 0) {
+  if (!isNaN(num) && num > 0 && num !== '') {
     if (Number(num) > Number(balance.innerText)) {
       alert('Insufficient Balance!');
       return 0;
