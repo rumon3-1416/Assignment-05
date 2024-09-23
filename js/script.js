@@ -1,6 +1,5 @@
 // User Balance
 const balance = document.getElementById('balance');
-const balance2 = document.getElementById('balance-2');
 // Donation Amounts
 const noaBal = document.getElementById('noa-bal');
 const feniBal = document.getElementById('feni-bal');
@@ -20,6 +19,9 @@ const historyPage = document.getElementById('history-page');
 // Confirmation Modal
 const confModal = document.getElementById('confirmation-modal');
 const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+// History Container
+const history = document.getElementById('history-page');
 
 // Donation Button Listener
 donationBtn.addEventListener('click', function () {
@@ -88,21 +90,33 @@ function handleBalance(area) {
     balance.innerText = Number(balance.innerText) - noaDon;
     noaBal.innerText = Number(noaBal.innerText) + noaDon;
 
-    noaDon !== 0 && ((noaInput.value = ''), handleModal());
+    noaDon !== 0 &&
+      ((noaInput.value = ''),
+      handleModal(
+        `${noaDon} Taka is Donated for Flood at Noakhali, Bangladesh`
+      ));
   } else if (area === 'feni') {
     let feniDon = checkNumber(feniInput.value);
 
     balance.innerText = Number(balance.innerText) - feniDon;
     feniBal.innerText = Number(feniBal.innerText) + feniDon;
 
-    feniDon !== 0 && ((feniInput.value = ''), handleModal());
+    feniDon !== 0 &&
+      ((feniInput.value = ''),
+      handleModal(
+        `${feniDon} Taka is Donated for Flood Relief in Feni, Bangladesh`
+      ));
   } else if (area === 'quota') {
     let quotaDon = checkNumber(quotaInput.value);
 
     balance.innerText = Number(balance.innerText) - quotaDon;
     quotaBal.innerText = Number(quotaBal.innerText) + quotaDon;
 
-    quotaDon !== 0 && ((quotaInput.value = ''), handleModal());
+    quotaDon !== 0 &&
+      ((quotaInput.value = ''),
+      handleModal(
+        `${quotaDon} Taka is Donated for Injured in the Quota Movement`
+      ));
   }
 }
 // Check is a Number & Return or Alert
@@ -121,10 +135,27 @@ function checkNumber(num) {
 }
 
 // Handle showing Modal
-function handleModal() {
+function handleModal(his) {
   confModal.classList.remove('hidden');
   confModal.classList.add('flex');
+
+  let sec = document.createElement('section');
+  sec.classList.add(
+    'w-full',
+    'p-8',
+    'border',
+    'border-gray-400',
+    'rounded-2xl',
+    'mb-8'
+  );
+  sec.innerHTML = `
+  <h5 class="text-xl font-bold py-4">${his}</h5>
+  <p class="text-gray-800">Date : </p>
+  `;
+
+  history.appendChild(sec);
 }
+
 // Hide modal
 modalCloseBtn.addEventListener('click', function () {
   confModal.classList.remove('flex');

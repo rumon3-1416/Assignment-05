@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assignment 01</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -26,10 +29,14 @@
     button:hover {
       transform: scale(1.05);
     }
+
+    .lexendFont {
+      font-family: "Lexend", sans-serif;
+    }
   </style>
 </head>
 
-<body>
+<body class="lexendFont">
   <!-- Modal Starts -->
   <section id="confirmation-modal"
     class="hidden w-full h-screen bg-[#00000038] fixed  inset-x-0 inset-y-0 z-10 justify-center items-center">
@@ -46,7 +53,7 @@
   <!-- Modal Ends -->
 
 
-  <header class="w-full fixed top-0 backdrop-blur-md">
+  <header class="w-full fixed top-0 backdrop-blur-md border-b-2 border-gray-300">
     <div class="w-full bg-[#f9f7f3bf]">
       <nav class="w-[95%] max-w-[1140px] mx-auto pt-6 pb-6 flex justify-between items-center">
         <a href="./pages/blog.html">
@@ -86,7 +93,7 @@
             <span>BDT</span>
           </div>
           <h5 class="text-xl font-bold py-4">Donate for Flood at Noakhali, Bangladesh</h5>
-          <p class="text-gray-800">The recent floods in Noakhali have caused significant damage to homes
+          <p class="text-gray-700">The recent floods in Noakhali have caused significant damage to homes
             infrastructure. Your
             donation will help
             provide essential supplies and to those affected by this disaster. Every contribution, big or small, makes
@@ -113,7 +120,7 @@
             <span>BDT</span>
           </div>
           <h5 class="text-xl font-bold py-4">Donate for Flood Relief in Feni,Bangladesh</h5>
-          <p class="text-gray-800">The recent floods in Feni have devastated local communities, leading to
+          <p class="text-gray-700">The recent floods in Feni have devastated local communities, leading to
             severe disruption and loss. Your generous
             donation will help provide immediate aid, including food, clean water, and medical supplies, to those
             affected
@@ -144,7 +151,7 @@
             <span>BDT</span>
           </div>
           <h5 class="text-xl font-bold py-4">Aid for Injured in the Quota Movement</h5>
-          <p class="text-gray-800">The recent Quota movement has resulted in numerous injuries and significant
+          <p class="text-gray-700">The recent Quota movement has resulted in numerous injuries and significant
             hardship for many individuals. Your support
             is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By
             contributing,
@@ -167,24 +174,7 @@
     <!-- Donation Ends -->
 
     <!-- History Starts -->
-    <div id="history-page" class="w-full hidden">
-      <section class="w-full p-8 border border-gray-400 rounded-2xl mb-8">
-        <h5 class="text-xl font-bold py-4">500 Taka is Donated for Flood at Noakhali, Bangladesh</h5>
-        <p class="text-gray-800">Date : 12 34 44</p>
-      </section>
-
-
-      <section class="w-full p-8 border border-gray-400 rounded-2xl mb-8">
-        <h5 class="text-xl font-bold py-4">500 Taka is Donated for Flood at Noakhali, Bangladesh</h5>
-        <p class="text-gray-800">Date : 12 34 44</p>
-      </section>
-
-      <section class="w-full p-8 border border-gray-400 rounded-2xl mb-8">
-        <h5 class="text-xl font-bold py-4">500 Taka is Donated for Flood at Noakhali, Bangladesh</h5>
-        <p class="text-gray-800">Date : 12 34 44</p>
-      </section>
-
-    </div>
+    <div id="history-page" class="w-full hidden"></div>
     <!-- History Ends -->
   </main>
 
