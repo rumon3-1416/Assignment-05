@@ -150,7 +150,7 @@ function handleModal(his) {
   );
   sec.innerHTML = `
   <h5 class="text-xl font-bold py-4">${his}</h5>
-  <p class="text-gray-800">Date : </p>
+  <p class="text-gray-800">Date : ${new Date()}</p>
   `;
 
   history.appendChild(sec);
