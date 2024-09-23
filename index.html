@@ -57,7 +57,7 @@
         </div>
         <div class="flex gap-3">
           <img class="size-7" src="./assets/coin.png" alt="coin">
-          <p class="text-xl font-medium"><span>5500 </span>BDT</p>
+          <p class="text-xl font-medium"><span id="balance">5500</span> BDT</p>
         </div>
       </nav>
     </div>
@@ -78,12 +78,12 @@
       <section class="w-full p-8 border border-gray-400 rounded-2xl md:grid md:grid-cols-2 md:gap-8">
         <img class="w-full h-full object-cover rounded-xl" src="./assets/noakhali.png" alt="img">
         <div class="w-full pt-8 md:pt-0">
-          <button
-            class="text-gray-950 font-medium bg-gray-200 rounded-lg cursor-default px-4 py-3 flex items-center gap-2">
+          <div
+            class="text-gray-950 font-medium bg-gray-200 rounded-lg cursor-default px-4 py-3 inline-flex items-center gap-2">
             <img class="size-4" src="./assets/coin.png" alt="coin">
-            <span>0</span>
+            <span id="noa-bal">0</span>
             <span>BDT</span>
-          </button>
+          </div>
           <h5 class="text-xl font-bold py-4">Donate for Flood at Noakhali, Bangladesh</h5>
           <p class="text-gray-800">The recent floods in Noakhali have caused significant damage to homes
             infrastructure. Your
@@ -91,9 +91,11 @@
             provide essential supplies and to those affected by this disaster. Every contribution, big or small, makes
             difference. Please
             join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-          <input id="" class="w-full font-light p-[18px] border border-gray-300 rounded-lg mt-6 mb-4 outline-none"
-            type="text" placeholder="Write Donation Amount">
-          <button class="w-full bg-[#B4F461] hover:bg-opacity-80 text-xl font-semibold px-8 py-4 rounded-lg">Donate
+          <input id="noa-input"
+            class="w-full font-medium p-[18px] border border-gray-300 rounded-lg mt-6 mb-4 outline-none" type="text"
+            placeholder="Write Donation Amount">
+          <button id="noa-btn"
+            class="w-full bg-[#B4F461] hover:bg-opacity-80 text-xl font-semibold px-8 py-4 rounded-lg">Donate
             Now</button>
         </div>
       </section>
@@ -103,12 +105,12 @@
       <section class="w-full p-8 border border-gray-400 rounded-2xl mt-8 md:grid md:grid-cols-2 md:gap-8">
         <img class="w-full h-full object-cover rounded-xl" src="./assets/feni.png" alt="img">
         <div class="w-full pt-8 md:pt-0">
-          <button
-            class="text-gray-950 font-medium bg-gray-200 rounded-lg cursor-default px-4 py-3 flex items-center gap-2">
+          <div
+            class="text-gray-950 font-medium bg-gray-200 rounded-lg cursor-default px-4 py-3 inline-flex items-center gap-2">
             <img class="size-4" src="./assets/coin.png" alt="coin">
-            <span>0</span>
+            <span id="feni-bal">0</span>
             <span>BDT</span>
-          </button>
+          </div>
           <h5 class="text-xl font-bold py-4">Donate for Flood Relief in Feni,Bangladesh</h5>
           <p class="text-gray-800">The recent floods in Feni have devastated local communities, leading to
             severe disruption and loss. Your generous
@@ -120,9 +122,11 @@
             contribution counts towards making a real difference. Please consider donating today to assist those in
             urgent
             need.</p>
-          <input id="" class="w-full font-light p-[18px] border border-gray-300 rounded-lg mt-6 mb-4 outline-none"
-            type="text" placeholder="Write Donation Amount">
-          <button class="w-full bg-[#B4F461] hover:bg-opacity-80 text-xl font-semibold px-8 py-4 rounded-lg">Donate
+          <input id="feni-input"
+            class="w-full font-medium p-[18px] border border-gray-300 rounded-lg mt-6 mb-4 outline-none" type="text"
+            placeholder="Write Donation Amount">
+          <button id="feni-btn"
+            class="w-full bg-[#B4F461] hover:bg-opacity-80 text-xl font-semibold px-8 py-4 rounded-lg">Donate
             Now</button>
         </div>
       </section>
@@ -132,12 +136,12 @@
       <section class="w-full p-8 border border-gray-400 rounded-2xl mt-8 md:grid md:grid-cols-2 md:gap-8">
         <img class="w-full h-full object-cover rounded-xl" src="./assets/quota-protest.png" alt="img">
         <div class="w-full pt-8 md:pt-0">
-          <button
-            class="text-gray-950 font-medium bg-gray-200 rounded-lg cursor-default px-4 py-3 flex items-center gap-2">
+          <div
+            class="text-gray-950 font-medium bg-gray-200 rounded-lg cursor-default px-4 py-3 inline-flex items-center gap-2">
             <img class="size-4" src="./assets/coin.png" alt="coin">
-            <span>0</span>
+            <span id="quota-bal">0</span>
             <span>BDT</span>
-          </button>
+          </div>
           <h5 class="text-xl font-bold py-4">Aid for Injured in the Quota Movement</h5>
           <p class="text-gray-800">The recent Quota movement has resulted in numerous injuries and significant
             hardship for many individuals. Your support
@@ -149,9 +153,11 @@
             donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider
             making a
             donation to support these brave individuals in their time of need.</p>
-          <input id="" class="w-full font-light p-[18px] border border-gray-300 rounded-lg mt-6 mb-4 outline-none"
-            type="text" placeholder="Write Donation Amount">
-          <button class="w-full bg-[#B4F461] hover:bg-opacity-80 text-xl font-semibold px-8 py-4 rounded-lg">Donate
+          <input id="quota-input"
+            class="w-full font-medium p-[18px] border border-gray-300 rounded-lg mt-6 mb-4 outline-none" type="text"
+            placeholder="Write Donation Amount">
+          <button id="quota-btn"
+            class="w-full bg-[#B4F461] hover:bg-opacity-80 text-xl font-semibold px-8 py-4 rounded-lg">Donate
             Now</button>
         </div>
       </section>
