@@ -19,6 +19,7 @@ const donationPage = document.getElementById('donation-page');
 const historyPage = document.getElementById('history-page');
 // Confirmation Modal
 const confModal = document.getElementById('confirmation-modal');
+const modalCloseBtn = document.getElementById('modalCloseBtn');
 
 // Donation Button Listener
 donationBtn.addEventListener('click', function () {
@@ -66,13 +67,15 @@ function handleDonHisBtn(currentBtn) {
     donationPage.classList.remove('hidden');
   }
 }
-
+// Noakhali Donation
 noaBtn.addEventListener('click', function () {
   handleBalance('noakhali');
 });
+// Feni Donation
 feniBtn.addEventListener('click', function () {
   handleBalance('feni');
 });
+// Quota Donation
 quotaBtn.addEventListener('click', function () {
   handleBalance('quota');
 });
@@ -84,16 +87,22 @@ function handleBalance(area) {
 
     balance.innerText = Number(balance.innerText) - noaDon;
     noaBal.innerText = Number(noaBal.innerText) + noaDon;
+
+    noaDon !== 0 && ((noaInput.value = ''), handleModal());
   } else if (area === 'feni') {
     let feniDon = checkNumber(feniInput.value);
 
     balance.innerText = Number(balance.innerText) - feniDon;
     feniBal.innerText = Number(feniBal.innerText) + feniDon;
+
+    feniDon !== 0 && ((feniInput.value = ''), handleModal());
   } else if (area === 'quota') {
     let quotaDon = checkNumber(quotaInput.value);
 
     balance.innerText = Number(balance.innerText) - quotaDon;
     quotaBal.innerText = Number(quotaBal.innerText) + quotaDon;
+
+    quotaDon !== 0 && ((quotaInput.value = ''), handleModal());
   }
 }
 // Check is a Number & Return or Alert
@@ -111,10 +120,13 @@ function checkNumber(num) {
   }
 }
 
-// window.addEventListener(
-//   'scroll',
-//   function () {
-//     window.scrollTo(0, 0);
-//   },
-//   { passive: false }
-// );
+// Handle showing Modal
+function handleModal() {
+  confModal.classList.remove('hidden');
+  confModal.classList.add('flex');
+}
+// Hide modal
+modalCloseBtn.addEventListener('click', function () {
+  confModal.classList.remove('flex');
+  confModal.classList.add('hidden');
+});

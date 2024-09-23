@@ -32,13 +32,14 @@
 <body>
   <!-- Modal Starts -->
   <section id="confirmation-modal"
-    class="hidden w-full h-screen bg-[#00000038] absolute  inset-x-0 inset-y-0 z-10 justify-center items-center">
+    class="hidden w-full h-screen bg-[#00000038] fixed  inset-x-0 inset-y-0 z-10 justify-center items-center">
     <div class="bg-white w-[90%] min-w-[450px] max-w-[600px] text-center py-8 shadow-xl rounded-2xl">
       <h1 class="text-gray-800 text-5xl font-extrabold mb-8">Congrates!</h1>
       <img class="size-14 mx-auto mb-12" src="./assets/coin.png" alt="coin">
       <p class="text-gray-600 text-2xl font-medium mb-5">You Have Donated for Humankind</p>
       <h3 class="text-gray-800 text-3xl font-bold mb-10">Successfully</h3>
-      <button class="bg-gray-100 hover:bg-gray-200 text-gray-600 text-xl font-bold px-7 py-5 rounded-lg">close
+      <button id="modalCloseBtn"
+        class="bg-gray-100 hover:bg-gray-200 text-gray-600 text-xl font-bold px-7 py-5 rounded-lg">close
         confirmation</button>
     </div>
   </section>
