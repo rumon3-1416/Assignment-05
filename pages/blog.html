@@ -22,6 +22,50 @@
     }
   </script>
   <style>
+    @keyframes faqAnim {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      8.33% {
+        transform: rotate(30deg);
+      }
+
+      16.67% {
+        transform: rotate(0deg);
+      }
+
+      33.33% {
+        transform: rotate(30deg);
+      }
+
+      50% {
+        transform: rotate(0deg);
+      }
+
+      75% {
+        transform: rotate(30deg);
+      }
+
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    .faq-logo {
+      animation-name: faqAnim;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    button {
+      transition: transform 0.4s ease;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
     .lexendFont {
       font-family: "Lexend", sans-serif;
     }
@@ -49,7 +93,7 @@
   <main class="w-[95%] max-w-[1140px] mx-auto pt-16 pb-32 mt-20">
     <div class="flex">
       <h1 class="text-3xl font-extrabold mb-8 mr-6">Important FAQ</h1>
-      <img class="size-12" src="../assets/comment-question.png" alt="faq">
+      <img class="faq-logo size-12" src="../assets/comment-question.png" alt="faq">
     </div>
 
     <div class="join join-vertical w-full gap-8">
