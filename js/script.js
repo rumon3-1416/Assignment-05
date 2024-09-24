@@ -23,6 +23,11 @@ const modalCloseBtn = document.getElementById('modalCloseBtn');
 // History Container
 const history = document.getElementById('history-page');
 
+// Blog & Home Toggling
+document.getElementById('blog-btn').addEventListener('click', function () {
+  window.location.href = './pages/blog.html';
+});
+
 // Donation Button Listener
 donationBtn.addEventListener('click', function () {
   handleDonHisBtn('donation');
